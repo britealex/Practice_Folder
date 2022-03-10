@@ -13,9 +13,6 @@
 
     <?php
 
-    $userNameErr = $passwordErr = "";
-    $userName = $password = "";
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["userName"])) {
             $userNameErr = "Username Required";
@@ -41,6 +38,12 @@
         $data = htmlspecialchars($data);
         return $data;
     }
+    
+    echo "<h2>Your Input:</h2>";
+    echo $userName;
+    echo "<br>";
+    echo $password;
+    echo "<br>";
 
     ?>
 
@@ -70,13 +73,7 @@
         </div>
     </main>
 
-    <?php
-    echo "<h2>Your Input:</h2>";
-    echo $userName;
-    echo "<br>";
-    echo $password;
-    echo "<br>";
-    ?>
+
 
 </body>
 
